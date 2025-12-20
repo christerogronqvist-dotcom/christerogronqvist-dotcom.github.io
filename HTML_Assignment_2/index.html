@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FFXIV LFG — Raid Signup</title>
+    <!-- basic style. block style -->
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; background:#eef2f6; color:#17202a; margin:0; }
+        .container { max-width:900px; margin:20px auto; background:#fff; padding:18px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+        header { background:#0b3b59; color:#fff; padding:16px; text-align:center; }
+        .header-photo { max-width:720px; width:90%; height:auto; border-radius:6px; display:block; margin:0 auto 10px; }
+        nav { background:#12627a; padding:8px; text-align:center; }
+        nav a { color:#fff; margin:0 8px; text-decoration:none; }
+        section { padding:12px 0; }
+        article { border-left:3px solid #dbe9ef; padding-left:12px; margin-bottom:12px; }
+        aside { background:#f7fbfc; padding:12px; margin-top:12px; }
+        footer { text-align:center; padding:10px; background:#0b3b59; color:#fff; margin-top:14px; }
+        .form-group { margin-bottom:10px; }
+        .form-group label { display:block; margin-bottom:4px; font-weight:600; }
+        input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea { width:100%; padding:7px; border:1px solid #ccd6db; border-radius:4px; box-sizing:border-box; }
+        input[type="range"] { width:100%; }
+        .small { font-size:0.9rem; color:#4a5a63; }
+        .roles label, .radios label { margin-right:8px; display:inline-block; }
+        .meta { font-size:0.9rem; color:#55636b; }
+        .submit { background:#10707f; color:#fff; border:none; padding:10px 16px; border-radius:4px; cursor:pointer; }
+        .submit:hover { background:#0b595f; }
+    </style>
+</head>
+<body>
+
+    <!--title header-->
+    <header>
+        <img src="Raid.png" alt="Raid group screenshot" class="header-photo">
+        <h1>FFXIV — LFG Raid Signup</h1>
+        <p class="small">A fictional raid group signup page for your HTML assignment</p>
+    </header>
+
+    <!--page navigation links-->
+    <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#signup">Signup</a>
+        <a href="#rules">Raid Rules</a>
+        <a href="#resources">Resources</a>
+    </nav>
+
+    <div class="container">
+
+        <!--Semantic element-->
+        <section id="about">
+            <article>
+                <h2>About This Group</h2>
+                <p class="meta">We run weekly progression raids for players of all skill levels. Fill the form below to be considered for our next raid night.</p>
+                <!-- Blockquote  -->
+                <blockquote>
+                    "A party that raids together, clears together." — Teamwork makes the run
+                </blockquote>
+            </article>
+        </section>
+
+        <!--Signup form-->
+        <section id="signup">
+            <h2 id="signup-heading">Raid Signup Form</h2>
+
+            <!--POST, action, and autocomplete-->
+            <form action="/submit-raid" method="POST" autocomplete="on" aria-labelledby="signup-heading">
+
+                <div class="form-group">
+                    <label for="ingameName">Name in game</label>
+                    <input type="text" id="ingameName" name="ingameName" placeholder="CharacterName[Server]" required minlength="2" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="datacenter">Datacenter</label>
+                    <select id="datacenter" name="datacenter">
+                        <option value="">--Choose datacenter--</option>
+                        <option value="Chaos (EU)">Chaos (EU)</option>
+                        <option value="Light (EU)">Light (EU)</option>
+                        <option value="Aether (NA)">Aether (NA)</option>
+                        <option value="Primal (NA)">Primal (NA)</option>
+                        <option value="Crystal (NA)">Crystal (NA)</option>
+                        <option value="Elemental (JP)">Elemental (JP)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="server">Home World / Server</label>
+                    <input list="servers" id="server" name="server" placeholder="Start typing your server...">
+                    <datalist id="servers">
+                        <!--EU servers (examples)-->
+                        <option value="Louisoix">
+                        <option value="Moogle">
+                        <option value="Cactuar">
+                        <option value="Goblin">
+                        <option value="Sargatanas">
+                        <option value="Lamia">
+                        <!--Common NA/JP servers-->
+                        <option value="Cerberus">
+                        <option value="Faerie">
+                        <option value="Ragnarok">
+                    </datalist>
+                </div>
+
+                <!--Role's (Tank/Healer/DPS) in the game-->
+                <div class="form-group roles">
+                    <label>Role</label>
+                    <label><input type="checkbox" name="role" value="tank"> Tank</label>
+                    <label><input type="checkbox" name="role" value="healer"> Healer</label>
+                    <label><input type="checkbox" name="role" value="dps"> DPS</label>
+                </div>
+
+                <!--Class for roles-->
+                <div class="form-group">
+                    <label for="job">Class / Job</label>
+                    <select id="job" name="job">
+                        <option value="">--Select your job--</option>
+                        <option value="paladin">Paladin (Tank)</option>
+                        <option value="warrior">Warrior (Tank)</option>
+                        <option value="gunbreaker">Gunbreaker (Tank)</option>
+                        <option value="whm">White Mage (Healer)</option>
+                        <option value="sch">Scholar (Healer)</option>
+                        <option value="ast">Astrologian (Healer)</option>
+                        <option value="mnk">Monk (DPS)</option>
+                        <option value="sam">Samurai (DPS)</option>
+                        <option value="brd">Bard (DPS)</option>
+                        <option value="mch">Machinist (DPS)</option>
+                        <option value="blm">Black Mage (DPS)</option>
+                    </select>
+                </div>
+
+                <!--Level-->
+                <div class="form-group">
+                    <label for="level">Level</label>
+                    <input type="number" id="level" name="level" min="1" max="90" value="90">
+                </div>
+
+                <!--Item Level-->
+                <div class="form-group">
+                    <label for="ilRange">Item Level (IL) — average gear item level</label>
+                    <input type="range" id="ilRange" name="ilRange" min="300" max="775" step="1" value="520">
+                    <span id="ilValue" class="small" aria-live="polite">520</span>
+                    <p class="small">Use this slider to indicate your current average gear IL.</p>
+                </div>
+
+                <!--Mended gear (yes/no)-->
+                <div class="form-group">
+                    <label>Is your gear melded?</label>
+                    <label><input type="radio" name="melded" value="yes"> Yes</label>
+                    <label><input type="radio" name="melded" value="no" checked> No</label>
+                </div>
+
+                <!--Microphone for communication-->
+                <div class="form-group">
+                    <label>Microphone?</label>
+                    <label><input type="radio" name="mic" value="yes"> Yes</label>
+                    <label><input type="radio" name="mic" value="no" checked> No</label>
+                </div>
+
+                <!--Languages spoken-->
+                <div class="form-group">
+                    <label>Languages you speak</label>
+                    <label><input type="checkbox" name="lang" value="english"> English</label>
+                    <label><input type="checkbox" name="lang" value="french"> French</label>
+                    <label><input type="checkbox" name="lang" value="german"> German</label>
+                    <label><input type="checkbox" name="lang" value="spanish"> Spanish</label>
+                    <label><input type="checkbox" name="lang" value="italian"> Italian</label>
+                    <label><input type="checkbox" name="lang" value="japanese"> Japanese</label>
+                    <input type="text" name="otherLangs" placeholder="Other languages (comma separated)">
+                </div>
+
+                <!--Timezone where player is from-->
+                <div class="form-group">
+                    <label for="timezone">Timezone</label>
+                    <select id="timezone" name="timezone">
+                        <option value="">--Select timezone--</option>
+                        <option value="UTC-8">UTC-8 (PST)</option>
+                        <option value="UTC-5">UTC-5 (EST)</option>
+                        <option value="UTC">UTC</option>
+                        <option value="GMT">GMT / BST</option>
+                        <option value="CET">CET (Central Europe)</option>
+                        <option value="CEST">CEST (Central Europe Summer)</option>
+                        <option value="EEST">EEST (Eastern Europe)</option>
+                    </select>
+                </div>
+
+                <!--Time you play-->
+                <div class="form-group">
+                    <label for="playtime">Typical time you play</label>
+                    <input type="text" id="playtime" name="playtime" placeholder="e.g., Weeknights 19:00-22:00 CET">
+                </div>
+
+                <!--Expansions (determines what you can play)-->
+                <div class="form-group">
+                    <label>Expansions owned</label>
+                    <label><input type="checkbox" name="exp" value="arr"> A Realm Reborn</label>
+                    <label><input type="checkbox" name="exp" value="hw"> Heavensward</label>
+                    <label><input type="checkbox" name="exp" value="sb"> Stormblood</label>
+                    <label><input type="checkbox" name="exp" value="shb"> Shadowbringers</label>
+                    <label><input type="checkbox" name="exp" value="ew"> Endwalker</label>
+                    <label><input type="checkbox" name="exp" value="dt"> Dawntrail</label>
+                </div>
+
+                <!--Raid drop preferences (easier to divide loot)-->
+                <div class="form-group">
+                    <label>Raid drop preferences</label>
+                    <label><input type="checkbox" name="drop" value="class"> Class-specific (e.g., specific weapon)</label>
+                    <label><input type="checkbox" name="drop" value="mount"> Mount</label>
+                    <label><input type="checkbox" name="drop" value="minion"> Minion</label>
+                    <label><input type="checkbox" name="drop" value="glamour"> Glamour/Armor</label>
+                    <label><input type="checkbox" name="drop" value="materia"> Materia</label>
+                    <label><input type="checkbox" name="drop" value="none"> No preference</label>
+                    <input type="text" name="dropOther" placeholder="Specific preferences (optional)">
+                </div>
+
+                <!--Readonly-->
+                <div class="form-group">
+                    <label for="region">Region (readonly)</label>
+                    <input type="text" id="region" name="region" value="NA" readonly>
+                </div>
+                <!--Email-->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="you@example.com" required minlength="5" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
+
+                <!--Password-->
+                <div class="form-group">
+                    <label for="acctPassword">Create a (dummy) password</label>
+                    <input type="password" id="acctPassword" name="acctPassword" placeholder="At least 6 characters" minlength="6">
+                </div>
+
+                <!--Years of experience-->
+                <div class="form-group">
+                    <label for="yearsExp">Years of raiding experience</label>
+                    <input type="number" id="yearsExp" name="yearsExp" min="0" max="50" value="0">
+                </div>
+
+                <!--Cover letter-->
+                <div class="form-group">
+                    <label for="cover">Cover letter / Short introduction</label>
+                    <textarea id="cover" name="cover" rows="5" cols="50" placeholder="Tell us about your playstyle, raid history, or anything else..."></textarea>
+                </div>
+
+                <!--Submit button (required)-->
+                <div class="form-group">
+                    <input class="submit" type="submit" value="Send Signup">
+                </div>
+
+            </form>
+        </section>
+
+        <!--Rules section as an article inside a section (semantic)-->
+        <section id="rules">
+            <article>
+                <h3>Raid Rules & Expectations</h3>
+                <ul>
+                    <li>Be on time and prepared.</li>
+                    <li>Voice chat is preferred for coordination.</li>
+                    <li>Bring consumables and cooldowns as requested.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!--Resources-->
+        <aside id="resources">
+            <h3>Resources</h3>
+            <p class="small">Quick raid guide (embedded):</p>
+            <embed src="https://www.youtube.com/embed/Wc_KrDp_Jks" type="text/html" style="width:100%;height:315px;">
+            <p class="small">Just in case you need some reminders</p>
+        </aside>
+
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <p>FFXIV LFG — School Project (HTML Assignment) &copy; 2025</p>
+        <p class="small">This is fictional content created to demonstrate HTML form elements and semantic structure.</p>
+    </footer>
+
+    <!--Small script to display the current IL slider value-->
+    <script>
+        (function(){
+            var il = document.getElementById('ilRange');
+            var ilValue = document.getElementById('ilValue');
+            if(il && ilValue){
+                var update = function(){ ilValue.textContent = il.value; };
+                il.addEventListener('input', update);
+                update();
+            }
+
+            // Autofill region based on selected datacenter
+            var datacenter = document.getElementById('datacenter');
+            var regionInput = document.getElementById('region');
+            if(datacenter && regionInput){
+                var dcMap = {
+                    'Chaos (EU)': 'EU',
+                    'Light (EU)': 'EU',
+                    'Aether (NA)': 'NA',
+                    'Primal (NA)': 'NA',
+                    'Crystal (NA)': 'NA',
+                    'Elemental (JP)': 'JP'
+                };
+                var updateRegion = function(){ regionInput.value = dcMap[datacenter.value] || ''; };
+                datacenter.addEventListener('change', updateRegion);
+                updateRegion();
+            }
+        })();
+    </script>
+
+</body>
+</html>
