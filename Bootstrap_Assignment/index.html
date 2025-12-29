@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Roast & Bloom Coffee</title>
+
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Bootstrap Icons. -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+	<style>
+		/* Custom CSS*/
+		.hero {
+			min-height: 60vh; /* 60% of viewport height */
+			background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+				url('https://images.unsplash.com/photo-1502462041640-5620b4e0f45e?q=80&w=1950&auto=format&fit=crop') center/cover no-repeat;
+			color: #fff;
+		}
+
+		.card-img-top {
+			height: 300px; 
+			object-fit: cover; 
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="alert alert-warning alert-dismissible fade show text-center m-0 rounded-0" role="alert">
+		<i class="bi bi-cup-hot me-1"></i> 
+		Holiday special: Buy 1 latte, get 1 50% off!
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="container">
+			<a class="navbar-brand fw-semibold" href="#home">
+				<i class="bi bi-cup-hot me-1"></i>Roast &amp; Bloom
+			</a>
+			
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+				aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+		
+			<div class="collapse navbar-collapse" id="mainNav">
+				<!-- navbar-nav: Flex container for nav links, ms-auto: pushes nav to the right -->
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<!-- Each link uses href="#section-id" to scroll to that section -->
+					<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+					<li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+					<li class="nav-item"><a class="nav-link" href="#hours">Hours</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- HERO (Grid: container, row, col; Flexbox: d-flex) -->
+	<header id="home" class="hero d-flex align-items-center">
+		<div class="container">
+			<div class="row justify-content-start">
+				<div class="col-12 col-lg-8">
+					<span class="badge bg-light text-dark mb-3">
+						<i class="bi bi-geo-alt me-1"></i>Open daily in your neighborhood
+					</span>
+					<h1 class="display-4 fw-bold">Sip Slow. Savor More.</h1>
+					<p class="lead mb-4">Handcrafted coffee, locally sourced pastries, and a cozy space to unwind.</p>
+					
+					<!-- Buttons: btn-primary, btn-outline-light -->
+					<div class="d-flex gap-2 flex-wrap">
+						<a href="#menu" class="btn btn-primary btn-lg">
+							<i class="bi bi-cup-hot me-1"></i> Explore Menu
+						</a>
+						<a href="#contact" class="btn btn-outline-light btn-lg">
+							<i class="bi bi-calendar-event me-1"></i> Book a Table
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- MENU (Cards: card, card-img-top, card-body, badge) -->
+	<section id="menu" class="py-5">
+		<div class="container">
+			<!-- Grid: col-12 col-md-8 -->
+			<div class="row align-items-end mb-4">
+				<div class="col-12 col-md-8">
+					<h2 class="mb-1">Menu Highlights</h2>
+					<p class="text-muted">Signature drinks and seasonal specials.</p>
+				</div>
+				<div class="col-12 col-md-4 text-md-end">
+					<a href="#contact" class="btn btn-primary">
+						<i class="bi bi-bag-plus me-1"></i> Order Ahead
+					</a>
+				</div>
+			</div>
+
+			<!-- Card grid: col-12 col-md-6 col-lg-4 -->
+			<div class="row g-4">
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card h-100 shadow-sm">
+					<img src="https://images.pexels.com/photos/377903/pexels-photo-377903.jpeg" class="card-img-top" alt="Lavender Latte">
+						<div class="card-body d-flex flex-column">
+							<span class="badge text-bg-success mb-2">
+								<i class="bi bi-stars me-1"></i>New
+							</span>
+							<h5 class="card-title">Lavender Honey Latte</h5>
+							<p class="card-text text-muted flex-grow-1">Smooth espresso with house-made lavender syrup.</p>
+							<div class="d-flex justify-content-between align-items-center">
+							<span class="fw-semibold">€5.25</span>
+								<button class="btn btn-sm btn-outline-dark">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card h-100 shadow-sm">
+					<img src="https://images.pexels.com/photos/13926603/pexels-photo-13926603.jpeg" class="card-img-top" alt="Pumpkin Spice Cappuccino">
+						<div class="card-body d-flex flex-column">
+							<span class="badge text-bg-warning mb-2">Seasonal</span>
+							<h5 class="card-title">Pumpkin Spice Cappuccino</h5>
+							<p class="card-text text-muted flex-grow-1">A fall favorite with warming spices.</p>
+							<div class="d-flex justify-content-between align-items-center">
+							<span class="fw-semibold">€4.95</span>
+								<button class="btn btn-sm btn-outline-dark">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card h-100 shadow-sm">
+					<img src="https://images.pexels.com/photos/2227126/pexels-photo-2227126.jpeg" class="card-img-top" alt="Iced Oat Matcha">
+						<div class="card-body d-flex flex-column">
+							<span class="badge text-bg-primary mb-2">Vegan</span>
+							<h5 class="card-title">Iced Oat Matcha</h5>
+							<p class="card-text text-muted flex-grow-1">Ceremonial matcha shaken with oat milk.</p>
+							<div class="d-flex justify-content-between align-items-center">
+							<span class="fw-semibold">€4.75</span>
+								<button class="btn btn-sm btn-outline-dark">Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ (Accordion: accordion-button, accordion-collapse, data-bs-toggle) -->
+	<section id="faq" class="py-5">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-12 col-lg-8">
+					<h2 class="mb-1">Frequently Asked Questions</h2>
+					<p class="text-muted">All about beans, milk options, and more.</p>
+				</div>
+			</div>
+
+			<div class="accordion accordion-flush" id="faqAccordion">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="q1">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">
+							Do you offer dairy alternatives?
+						</button>
+					</h2>
+					<div id="a1" class="accordion-collapse collapse" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">Yes! We carry oat, almond, and soy milk at no extra charge on Mondays.</div>
+					</div>
+				</div>
+
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="q2">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+							Where do your beans come from?
+						</button>
+					</h2>
+					<div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">We partner with small farms and rotate single-origin lots. Check the bar for current roasts.</div>
+					</div>
+				</div>
+
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="q3">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+							Do you have Wi‑Fi and outlets?
+						</button>
+					</h2>
+					<div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
+						<div class="accordion-body">Yes, free Wi‑Fi and plenty of outlets—please be kind during peak hours.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- HOURS (Table: table-responsive, table-striped; Grid: col-lg-6) -->
+	<section id="hours" class="py-5 bg-light">
+		<div class="container">
+			<div class="row gy-4 align-items-center">
+				<div class="col-12 col-lg-6">
+					<h2 class="mb-3">Hours & Location</h2>
+					
+					<div class="table-responsive rounded shadow-sm">
+						<table class="table align-middle mb-0">
+							<thead>
+								<tr>
+
+									<th class="bg-dark text-white">Day</th>
+									<th class="bg-dark text-white">Open</th>
+									<th class="bg-dark text-white">Close</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr><td>Mon–Fri</td><td>07:00</td><td>19:00</td></tr>
+							<tr><td>Saturday</td><td>08:00</td><td>20:00</td></tr>
+							<tr><td>Sunday</td><td>08:00</td><td>18:00</td></tr>
+							</tbody>
+						</table>
+					</div>
+
+					<ul class="list-unstyled mt-3 mb-0">
+					<li class="mb-2"><i class="bi bi-geo-alt-fill text-danger me-2"></i>Kalliokatu 15, Helsinki</li>
+					<li class="mb-2"><i class="bi bi-telephone-fill text-success me-2"></i>+358 9 6234 891</li>
+						<li class="mb-2"><i class="bi bi-envelope-fill text-primary me-2"></i>goodcoffee@roasted.fi</li>
+					</ul>
+				</div>
+
+				<div class="col-12 col-lg-6">
+				<img src="https://images.pexels.com/photos/2260824/pexels-photo-2260824.jpeg" alt="Cafe storefront" class="img-fluid rounded shadow-sm">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CONTACT (Form: needs-validation, form-control, invalid-feedback; Grid: col-lg-7) -->
+	<section id="contact" class="py-5">
+		<div class="container">
+			<div class="row mb-4">
+				<div class="col-12 col-lg-8">
+					<h2 class="mb-1">Contact Us</h2>
+					<p class="text-muted">Questions, catering, or collaborations—drop us a note.</p>
+				</div>
+			</div>
+
+			<div class="row g-4">
+				<div class="col-12 col-lg-7">
+					<form class="needs-validation" novalidate>
+						<div class="row g-3">
+							<div class="col-12 col-md-6">
+								<label for="name" class="form-label">Name</label>
+								<input type="text" class="form-control" id="name" placeholder="Jane Doe" required>
+								<div class="invalid-feedback">Please provide your name.</div>
+							</div>
+
+							<div class="col-12 col-md-6">
+								<label for="email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="email" placeholder="jane@example.com" required>
+								<div class="invalid-feedback">Please provide a valid email.</div>
+							</div>
+
+							<div class="col-12">
+								<label for="message" class="form-label">Message</label>
+								<textarea class="form-control" id="message" rows="5" placeholder="How can we help?" required></textarea>
+								<div class="invalid-feedback">Please enter a message.</div>
+							</div>
+
+							<div class="col-12 d-flex gap-2">
+								<button type="submit" class="btn btn-dark"><i class="bi bi-send me-1"></i> Send</button>
+								<button type="reset" class="btn btn-outline-secondary">Reset</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="col-12 col-lg-5">
+					<div class="p-4 bg-light rounded h-100">
+						<h5 class="fw-semibold mb-3"><i class="bi bi-info-circle me-1"></i> Quick Info</h5>
+						<p class="mb-2"><i class="bi bi-truck me-2"></i>Local delivery available within 3 km.</p>
+						<p class="mb-2"><i class="bi bi-people me-2"></i>Reserve our back room for up to 15 guests.</p>
+						<p class="mb-0"><i class="bi bi-wifi me-2"></i>Free Wi‑Fi — ask for the daily password.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER (Flexbox: d-flex, justify-content-md-end; Icons: link-light, bi bi-*) -->
+	<footer class="bg-dark text-light pt-5 pb-4">
+		<div class="container">
+			<div class="row gy-4 align-items-center">
+				<div class="col-12 col-md-6">
+					<h4 class="mb-2">Roast &amp; Bloom</h4>
+					<p class="text-white-50 mb-1">Craft coffee, baked fresh daily.</p>
+					<small class="text-white-50">© <span id="year"></span> Roast &amp; Bloom Coffee</small>
+				</div>
+				
+				<div class="col-12 col-md-6 d-flex gap-3 justify-content-md-end">
+					<a class="link-light" href="#" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i></a>
+					<a class="link-light" href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+					<a class="link-light" href="#" aria-label="Facebook"><i class="bi bi-facebook fs-4"></i></a>
+					<a class="link-light" href="#" aria-label="Email"><i class="bi bi-envelope fs-4"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Bootstrap JS Bundle -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<script>
+		// Set current year in footer
+		document.getElementById('year').textContent = new Date().getFullYear();
+
+		// Form validation
+		(() => {
+			const form = document.querySelector('.needs-validation');
+			if (!form) return;
+			form.addEventListener('submit', (event) => {
+				if (!form.checkValidity()) {
+					event.preventDefault();
+					event.stopPropagation();
+				}
+				form.classList.add('was-validated');
+			});
+		})();
+	</script>
+</body>
+
+</html>
