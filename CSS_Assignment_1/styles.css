@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Type selector for the body */
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png"); /* Example background image */
+}
+
+/* Chaining selector (h1 with a class) and ID selector */
+h1#main-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Multiple selectors */
+h1, h2 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Main form container styling */
+form {
+    max-width: 800px; /* max-width property */
+    min-width: 400px; /* min-width property */
+    margin: 20px auto; /* margin shorthand and auto for centering */
+    padding: 20px; /* padding shorthand */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* border-radius property */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Class selector for form sections */
+.form-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    border-left: 5px solid #3498db;
+}
+
+.form-section h2 {
+    border-bottom: none;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+}
+
+/* Attribute selectors for input types */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="file"],
+input[type="number"],
+textarea,
+select {
+    width: 100%; /* width property */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* font-size property */
+    font-family: 'Space Mono', monospace;
+}
+
+/* Pseudo-class for focus state on inputs */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+/* Styling for the submit button */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+/* Pseudo-class for hover state on the button */
+button[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Pseudo-class for active state on the button */
+button[type="submit"]:active {
+    background-color: #2471a3;
+    transform: translateY(1px);
+}
+
+/* A class to demonstrate !important */
+.important-text {
+    color: red !important; 
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+/* Multiple class selectors */
+.green.bold {
+    color: #27ae60;
+    font-weight: 700;
+}
+
+/* This is a visibility property used to hide an element */
+.hidden-element {
+    visibility: hidden;
+    height: 0; 
+    margin: 0; 
+}
+
+/* Style for a textarea with min/max height and overflow */
+textarea#cover-letter {
+    min-height: 120px; 
+    max-height: 300px; 
+    overflow: auto; 
+    resize: vertical;
+}
+
+/* Style for a disabled input field */
+input:disabled {
+    background-color: #eeeeee;
+    opacity: 0.7; 
+    cursor: not-allowed;
+}
+
+/* Example of individual padding properties */
+.individual-padding {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+/* margin properties */
+.individual-margin {
+    margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+/* Pseudo-classes for a link */
+a:visited {
+    color: #8e44ad;
+}
+
+/* Checkbox and Radio button styling */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Slider styling */
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #3498db;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #3498db;
+    cursor: pointer;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form for Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Internal CSS -->
+    <style>
+        /* This is an ID selector targeting the main title */
+        #main-title {
+            text-shadow: 2px 2px 4px #aaaaaa;
+        }
+
+        /* This is a pseudo-class for a link */
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">Job Application for Web Developer</h1>
+
+    <form action="#" method="post">
+        <div class="form-section">
+            <h2>Personal Information</h2>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+            
+            <!-- Inline CSS with a comment -->
+            <p style="color: #555; font-size: 0.9em;">Please enter a valid phone number.</p>
+        </div>
+
+        <div class="form-section">
+            <h2>Position and Availability</h2>
+            <label for="position">Position Applying For:</label>
+            <select id="position" name="position">
+                <option value="frontend">Frontend Developer</option>
+                <option value="backend">Backend Developer</option>
+                <option value="fullstack">Full-Stack Developer</option>
+            </select>
+
+            <label for="start-date">Available Start Date:</label>
+            <input type="date" id="start-date" name="start-date">
+        </div>
+
+        <div class="form-section">
+            <h2>Resume and Cover Letter</h2>
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+
+            <label for="cover-letter">Cover Letter:</label>
+            <textarea id="cover-letter" name="cover-letter" rows="6"></textarea>
+        </div>
+
+        <div class="form-section">
+            <h2>Work Experience</h2>
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" min="0" class="individual-padding">
+
+            <p class="green bold">Please list your relevant work experience.</p>
+        </div>
+
+        <div class="form-section">
+            <h2>Desired Salary</h2>
+            <label for="salary">Monthly Pay: <span id="salary-value">5000</span>€</label>
+            <input type="range" id="salary" name="salary" min="2000" max="8000" value="5000" class="slider">
+        </div>
+        
+        <div class="form-section">
+            <h2>Skills</h2>
+            <p>Select your skills:</p>
+            <label><input type="checkbox" name="skills" value="html"> HTML</label>
+            <label><input type="checkbox" name="skills" value="css"> CSS</label>
+            <label><input type="checkbox" name="skills" value="js"> JavaScript</label>
+        </div>
+
+        <div class="form-section individual-margin">
+            <h2>Terms and Conditions</h2>
+            <p>Please read our <a href="#" target="_blank">terms of service</a>.</p>
+            <label>
+                <input type="checkbox" name="terms" required> I agree to the terms and conditions
+            </label>
+        </div>
+
+        <div class="hidden-element">
+            <p>This element is hidden using the visibility property.</p>
+        </div>
+
+        <div>
+            <label for="disabled-input">This is a disabled input:</label>
+            <input type="text" id="disabled-input" name="disabled-input" value="You can't edit this" disabled>
+        </div>
+
+        <button type="submit">Submit Application</button>
+        
+        <p class="important-text individual-margin">This is an important notice!</p>
+    </form>
+
+    <script>
+        const salarySlider = document.getElementById('salary');
+        const salaryValue = document.getElementById('salary-value');
+
+        salarySlider.oninput = function() {
+            salaryValue.textContent = this.value;
+        }
+    </script>
+
+</body>
+</html>
