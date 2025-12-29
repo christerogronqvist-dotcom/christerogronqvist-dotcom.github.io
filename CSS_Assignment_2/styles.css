@@ -1,0 +1,372 @@
+/* ============================================
+   CYBERPUNK ART GALLERY
+   ============================================ */
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset and base styling */
+body {
+    background-color: rgb(15, 15, 25); /* RGB color */
+    font-family: 'Rajdhani', Arial, sans-serif; /* Font with fallback */
+    color: #e0e0e0; /* Hex color */
+    line-height: 1.6;
+}
+
+/* ============================================
+   NAVIGATION BAR
+   ============================================ */
+/* Fixed positioning at top */
+.navbar {
+    position: fixed; /* Fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(139, 0, 139, 0.9); /* RGBA opacity */
+    padding: 1rem 2rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.5rem;
+    font-weight: 700; /* Numeric weight */
+    color: cyan; /* Named color */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Display inline */
+.nav-links li {
+    display: inline;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500; /* Keyword weight */
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: hsla(180, 100%, 50%, 0.2); /* HSLA opacity */
+    color: #00ffff;
+}
+
+.nav-link.active {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+/* ============================================
+   STICKY HEADER
+   ============================================ */
+/* Sticky positioning */
+.sticky-header {
+    position: sticky;
+    top: 70px;
+    background: hsl(280, 80%, 30%); /* HSL color */
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 70px;
+    z-index: 100;
+}
+
+.header-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.header-subtitle {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    word-spacing: 3px;
+}
+
+/* ============================================
+   GALLERY CONTAINER
+   ============================================ */
+.gallery-container {
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================
+   ARTWORK CARDS
+   ============================================ */
+/* Relative positioning */
+.artwork-card {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    background: #1a1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    transition: all 0.4s ease;
+    justify-self: center;
+}
+
+.artwork-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 255, 255, 0.4);
+}
+
+.artwork-card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+/* Static positioning (default) */
+.artwork-info {
+    position: static;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.8);
+    height: 20%;
+}
+
+.artwork-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #00ffff;
+    margin-bottom: 0.3rem;
+    text-transform: capitalize;
+}
+
+.artwork-description {
+    color: lightgray;
+    font-size: 1rem;
+}
+
+/* Absolute positioning within relative parent */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+    background-color: #ff00ff;
+    color: white;
+}
+
+/* ============================================
+   CARD VARIATIONS
+   ============================================ */
+/* Left tilt */
+.rotate-card-left {
+    transform: rotate(-4deg);
+}
+
+.rotate-card-left:hover {
+    transform: rotate(-4deg) translateY(-10px) scale(1.02);
+}
+
+/* Right tilt */
+.rotate-card-right {
+    transform: rotate(4deg);
+}
+
+.rotate-card-right:hover {
+    transform: rotate(4deg) translateY(-10px) scale(1.02);
+}
+
+/* Featured large card */
+.large-card {
+    max-width: 650px;
+    height: 550px;
+    grid-column: span 1;
+    box-shadow: 0 15px 50px rgba(255, 0, 255, 0.3);
+}
+
+.large-card:hover {
+    transform: rotate(2deg) translateY(-12px) scale(1.03);
+    box-shadow: 0 25px 70px rgba(0, 255, 255, 0.5);
+}
+
+/* Smaller card */
+.small-card {
+    max-width: 400px;
+    height: 420px;
+}
+
+.small-card:hover {
+    transform: rotate(4deg) translateY(-8px) scale(1.02);
+}
+
+/* ============================================
+   FLOAT & CLEAR
+   ============================================ */
+/* Clear property */
+.clear-float {
+    clear: both;
+    grid-column: 1 / -1;
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+.about-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.about-section {
+    background: rgba(30, 30, 60, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 2px solid hsla(280, 70%, 50%, 0.5); /* HSLA opacity */
+}
+
+.about-heading {
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.about-subheading {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.5rem;
+    color: #ff00ff;
+    margin: 1.5rem 0 1rem;
+    font-weight: 600;
+}
+
+.about-text {
+    color: rgb(230, 230, 240); /* RGB color */
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    word-spacing: 2px;
+}
+
+.info-box {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #00ffff;
+    margin-top: 1.5rem;
+}
+
+.info-box h4 {
+    font-family: 'Orbitron', monospace;
+    color: cyan;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.info-box p {
+    color: white;
+    margin: 0.5rem 0;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: rgb(20, 20, 30); /* RGB color */
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 2px solid #00ffff;
+    margin-top: 2rem;
+}
+
+.footer p {
+    color: lightblue; /* Named color */
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.credits {
+    color: rgba(255, 255, 255, 0.6); /* RGBA opacity */
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* ============================================
+   SCROLL TO TOP BUTTON
+   ============================================ */
+/* Fixed positioning */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: hsl(280, 100%, 50%); /* HSL color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+    z-index: 999;
+}
+
+.scroll-top:hover {
+    background: transparent;
+    border: 3px solid #00ffff;
+    color: #00ffff;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .artwork-card {
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .header-title {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+}
