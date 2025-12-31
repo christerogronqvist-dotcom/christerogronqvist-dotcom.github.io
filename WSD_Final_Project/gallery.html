@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Cyberpunk Art Gallery</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CYBERPUNK GALLERY</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="container my-5">
+      <h1 class="mb-4 text-center">Gallery</h1>
+      <div class="row g-4">
+        <!-- Placeholder artworks, replace with your own images -->
+        <div class="row g-4">
+          <!-- First row: 4 items -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card h-100">
+              <img src="https://images.pexels.com/photos/4488636/pexels-photo-4488636.jpeg" class="card-img-top gallery-img" alt="Neon-lit city street with people and signs" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.pexels.com/photos/4488636/pexels-photo-4488636.jpeg" data-title="Neon Street Life" data-desc="A bustling cyberpunk street glowing with neon lights and futuristic energy." loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Neon Pulse</h5>
+                <p class="card-text">In the future, bright colors rule everywhere; it can hide people's intentions, be they good or bad.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card h-100">
+              <img src="https://images.pexels.com/photos/3389817/pexels-photo-3389817.jpeg" class="card-img-top gallery-img" alt="Futuristic cityscape with neon reflections" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.pexels.com/photos/3389817/pexels-photo-3389817.jpeg" data-title="Reflections of Tomorrow" data-desc="A city of glass and neon, reflecting the dreams of a digital future." loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">City Life</h5>
+                <p class="card-text">Everything can be a place to market brands; nothing comes free.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card h-100">
+              <img src="https://images.pexels.com/photos/1036642/pexels-photo-1036642.jpeg" class="card-img-top gallery-img" alt="Neon-lit alley with cyberpunk atmosphere" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.pexels.com/photos/1036642/pexels-photo-1036642.jpeg" data-title="Electric Alley" data-desc="A mysterious alleyway illuminated by vibrant, electric hues." loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Virtual Future</h5>
+                <p class="card-text">When the real-life colors start to stress you, hide in virtual reality whenever and wherever.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card h-100">
+              <img src="https://images.pexels.com/photos/31233585/pexels-photo-31233585.jpeg" class="card-img-top gallery-img" alt="Cyberpunk city with neon signs and rain" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.pexels.com/photos/31233585/pexels-photo-31233585.jpeg" data-title="Rainy Neon Nights" data-desc="A rainy night in the city, where neon signs light up the wet streets." loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Android Life</h5>
+                <p class="card-text">Androids are the norm; you can't hide from them.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Second row: 3 items, centered -->
+          <div class="w-100"></div>
+          <div class="d-flex justify-content-center">
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/4486394/pexels-photo-4486394.jpeg" class="card-img-top gallery-img" alt="Cyberpunk portrait with neon lighting" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.pexels.com/photos/4486394/pexels-photo-4486394.jpeg" data-title="Neon Portrait" data-desc="A striking portrait bathed in the glow of neon lights." loading="lazy">
+                  <div class="card-body">
+                    <h5 class="card-title">Neon Dreamer</h5>
+                    <p class="card-text">Sometimes your eyes fail you; new cybernetic optics don't.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/2767540/pexels-photo-2767540.jpeg" class="card-img-top gallery-img" alt="Futuristic city with neon-lit buildings" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.pexels.com/photos/2767540/pexels-photo-2767540.jpeg" data-title="City of Lights" data-desc="A futuristic cityscape where every building glows with color." loading="lazy">
+                  <div class="card-body">
+                    <h5 class="card-title">Connection</h5>
+                    <p class="card-text">Travel is faster, but is it safer—or is it even real?</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100">
+                  <img src="https://images.pexels.com/photos/11424815/pexels-photo-11424815.jpeg" class="card-img-top gallery-img" alt="Cyberpunk city with pink and blue neon" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.pexels.com/photos/11424815/pexels-photo-11424815.jpeg" data-title="Neon Dreamscape" data-desc="A dreamlike city awash in pink and blue neon, blending reality and fantasy." loading="lazy">
+                  <div class="card-body">
+                    <h5 class="card-title">Awareness</h5>
+                    <p class="card-text">People can do a lot more now than ever; everyone can be dangerous. Be careful.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="galleryModalLabel"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="galleryModalImg" src="" alt="" class="img-fluid rounded-4 mb-3" style="max-height:60vh;" loading="lazy">
+            <p id="galleryModalDesc" class="mb-0"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="mb-2">
+          <a href="#" aria-label="Instagram" class="me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Facebook" class="me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="GitHub" class="me-3"><i class="bi bi-github"></i></a>
+        </div>
+        <small>&copy; 2025 Cyberpunk Art Gallery. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script>
+      // Gallery modal logic
+      document.addEventListener('DOMContentLoaded', function() {
+        var galleryImgs = document.querySelectorAll('.gallery-img');
+        var modal = document.getElementById('galleryModal');
+        var modalImg = document.getElementById('galleryModalImg');
+        var modalTitle = document.getElementById('galleryModalLabel');
+        var modalDesc = document.getElementById('galleryModalDesc');
+        galleryImgs.forEach(function(img) {
+          img.addEventListener('click', function() {
+            modalImg.src = img.getAttribute('data-img');
+            modalImg.alt = img.alt;
+            modalTitle.textContent = img.getAttribute('data-title');
+            modalDesc.textContent = img.getAttribute('data-desc');
+          });
+        });
+        // Clear modal image on close
+        modal.addEventListener('hidden.bs.modal', function () {
+          modalImg.src = '';
+        });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</body>
+</html>
