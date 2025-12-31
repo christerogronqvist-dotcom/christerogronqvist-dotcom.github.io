@@ -1,0 +1,280 @@
+/* Light/Dark Mode Toggle Styles */
+.light-dark-toggle {
+    background: none;
+    border: 2px solid #00fff7;
+    color: #00fff7;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.light-dark-toggle:hover {
+    background: #00fff7;
+    color: #181828;
+    border-color: #ff00cc;
+}
+
+body.light-mode {
+    background: #f6f6ff;
+    color: #23234a;
+}
+body.light-mode .navbar {
+    background: linear-gradient(90deg, #e0e0ff 0%, #b3b3e6 50%, #f6f6ff 100%);
+}
+body.light-mode .cyberpunk-hero,
+body.light-mode .featured-bg {
+    background: linear-gradient(135deg, #e0e0ff 0%, #b3b3e6 100%);
+    color: #23234a;
+    box-shadow: 0 0 40px #00fff7, 0 0 80px #ff00cc inset;
+}
+body.light-mode .card {
+    background: #fff;
+    color: #23234a;
+    box-shadow: 0 0 16px #00fff7, 0 0 8px #ff00cc inset;
+}
+body.light-mode .cyberpunk-btn {
+    background: #00fff7;
+    color: #23234a;
+    box-shadow: 0 0 10px #00fff7, 0 0 20px #ff00cc inset;
+}
+body.light-mode .cyberpunk-btn:hover {
+    background: #ff00cc;
+    color: #fff;
+    box-shadow: 0 0 20px #ff00cc, 0 0 40px #00fff7 inset;
+}
+body.light-mode footer {
+    background: #e0e0ff;
+    color: #23234a;
+    border-top: 2px solid #00fff7;
+}
+body.light-mode a {
+    color: #ff00cc;
+}
+body.light-mode a:hover {
+    color: #00fff7;
+}
+body.light-mode .cyberpunk-quote,
+body.light-mode .cyberpunk-hero-quote {
+    background: linear-gradient(90deg, #fff 0%, #e0e0ff 60%, #b3b3e6 100%);
+    color: #23234a;
+    border: 2px solid #ff00cc;
+    box-shadow: 0 0 24px #00fff7, 0 0 12px #ff00cc inset;
+    text-shadow: 0 0 8px #ff00cc, 0 0 2px #00fff7;
+}
+body.light-mode .cyberpunk-quote .blockquote-footer,
+body.light-mode .cyberpunk-hero-quote .blockquote-footer {
+    color: #ff00cc;
+    text-shadow: 0 0 4px #00fff7;
+}
+.cyberpunk-hero-quote,
+.cyberpunk-quote {
+        min-height: 180px;
+}
+@media (max-width: 991.98px) {
+    .cyberpunk-hero-quote,
+    .cyberpunk-quote {
+        margin-bottom: 24px;
+    }
+}
+/* Hero Section Quote */
+.cyberpunk-hero-quote {
+    background: linear-gradient(90deg, #23234a 0%, #2c5364 60%, #ff00cc 100%);
+    border: 2px solid #00fff7;
+    border-radius: 18px;
+    box-shadow: 0 0 24px #ff00cc, 0 0 12px #00fff7 inset;
+    color: #fff;
+    font-size: 1.25rem;
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    text-shadow: 0 0 8px #00fff7, 0 0 2px #ff00cc;
+    position: relative;
+    margin-top: 32px;
+    margin-bottom: 0;
+    letter-spacing: 1.2px;
+    padding: 1.2rem 1.5rem 1rem 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: box-shadow 0.3s;
+}
+.cyberpunk-hero-quote .quote-icon {
+    font-size: 1.6rem;
+    color: #ff00cc;
+    text-shadow: 0 0 12px #00fff7;
+    margin-bottom: 8px;
+    display: block;
+}
+.cyberpunk-hero-quote blockquote {
+    font-style: italic;
+    margin-bottom: 0;
+}
+.cyberpunk-hero-quote .blockquote-footer {
+    color: #00fff7;
+    font-size: 1rem;
+    text-shadow: 0 0 4px #ff00cc;
+}
+/* Cyberpunk color for slider value */
+.text-cyberpunk {
+    color: #ff00cc;
+    text-shadow: 0 0 6px #00fff7, 0 0 2px #fff;
+}
+/* Cyberpunk Quote Section */
+.cyberpunk-quote {
+    background: linear-gradient(90deg, #181828 0%, #2c5364 60%, #ff00cc 100%);
+    border: 2px solid #00fff7;
+    border-radius: 18px;
+    box-shadow: 0 0 24px #ff00cc, 0 0 12px #00fff7 inset;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    text-shadow: 0 0 8px #00fff7, 0 0 2px #ff00cc;
+    position: relative;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    letter-spacing: 1.5px;
+    transition: box-shadow 0.3s;
+}
+.cyberpunk-quote .quote-icon {
+    font-size: 2.2rem;
+    color: #ff00cc;
+    text-shadow: 0 0 12px #00fff7;
+    margin-bottom: 8px;
+    display: block;
+}
+.cyberpunk-quote blockquote {
+    font-style: italic;
+    margin-bottom: 0;
+}
+.cyberpunk-quote .blockquote-footer {
+    color: #00fff7;
+    font-size: 1rem;
+    text-shadow: 0 0 4px #ff00cc;
+}
+
+.about-bg {
+    background: linear-gradient(135deg, #0f2027 0%, #2c5364 50%, #ff00cc 100%);
+    min-height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+.featured-bg .container {
+    position: relative;
+    z-index: 2;
+}
+/* styles.css - Cyberpunk Art Gallery custom styles */
+
+body {
+    background: #181828;
+    color: #f6f6ff;
+    font-family: 'Roboto', Arial, sans-serif;
+    text-shadow: 0 0 4px #00fff7, 0 0 2px #ff00cc;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+}
+
+.cyberpunk-hero {
+    background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+    color: #fff;
+    padding: 80px 0 40px 0;
+    text-align: center;
+    box-shadow: 0 0 40px #00fff7, 0 0 80px #ff00cc inset;
+}
+
+.cyberpunk-btn {
+    background: #ff00cc;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #ff00cc, 0 0 20px #00fff7 inset;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.cyberpunk-btn:hover {
+    background: #00fff7;
+    color: #181828;
+    box-shadow: 0 0 20px #00fff7, 0 0 40px #ff00cc inset;
+}
+
+
+.card {
+    background: #23234a;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 0 16px #00fff7, 0 0 8px #ff00cc inset;
+    color: #f6f6ff;
+    text-shadow: 0 0 2px #00fff7, 0 0 1px #ff00cc;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card-img-top {
+    border-radius: 18px 18px 0 0;
+    transition: box-shadow 0.3s, filter 0.3s, transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    will-change: transform;
+}
+
+.card:hover {
+    box-shadow: 0 0 32px #ff00cc, 0 0 24px #00fff7 inset, 0 0 8px #fff;
+    transform: translateY(-8px) scale(1.03) rotate(-1deg);
+}
+.card:hover .card-img-top {
+    filter: brightness(1.15) drop-shadow(0 0 16px #ff00cc) drop-shadow(0 0 8px #00fff7);
+    transform: scale(1.15) translateY(-10px);
+    z-index: 2;
+}
+.card .card-body .quote {
+    opacity: 0;
+    color: #ff00cc;
+    font-style: italic;
+    text-shadow: 0 0 6px #00fff7, 0 0 2px #fff;
+    transition: opacity 0.4s, color 0.3s;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+}
+.card .card-body .card-text {
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+.card:hover .card-body .card-text {
+    opacity: 0;
+}
+.card:hover .card-body .quote {
+    opacity: 1;
+    height: auto;
+    margin-top: 8px;
+}
+
+footer {
+    background: #181828;
+    color: #e0e0ff;
+    padding: 24px 0 12px 0;
+    text-align: center;
+    border-top: 2px solid #00fff7;
+    margin-top: 40px;
+    text-shadow: 0 0 2px #00fff7, 0 0 1px #ff00cc;
+}
+
+
+a {
+    color: #00fff7;
+    text-shadow: 0 0 2px #00fff7, 0 0 1px #ff00cc;
+}
+a:hover {
+    color: #ff00cc;
+    text-shadow: 0 0 4px #ff00cc, 0 0 2px #00fff7;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .cyberpunk-hero {
+        padding: 40px 0 20px 0;
+    }
+    .card {
+        margin-bottom: 24px;
+    }
+}
